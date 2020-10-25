@@ -1,0 +1,81 @@
+[{
+    "id": 1,
+    "avatar":"/assets/avatar-10.png",
+    "name": "Tom Cruise",
+    "title": "Regional Manager",
+    "salary": "180000",
+    "department": "Executive"
+  },
+  {
+    "id": 2,
+    "avatar":"/assets/avatar-2.jpg",
+    "name": "Brad Pitt",
+    "title": "Accountant",
+    "salary": "70000",
+    "department": "Finance"
+  },
+  {
+    "id": 3,
+    "avatar":"/assets/avatar-3.jpg",
+    "name": "Morgan Freeman",
+    "title": "Quality Control Associate",
+    "salary": "40000",
+    "department": "Operations"
+  },
+  {
+    "id": 4,
+    "avatar":"/assets/avatar-4.jpg",
+    "name": "Cameron Diaz",
+    "title": "Manager",
+    "salary": "150000",
+    "department": "Operations"
+  },
+  {
+    "id": 5,
+    "avatar":"/assets/avatar-5.jpg",
+    "name": "Scarlett Johansson",
+    "title": "Software Engineer",
+    "salary": "175000",
+    "department": "Information Technology"
+  },
+  {
+    "id": 6,
+    "avatar":"/assets/avatar-6.jpg",
+    "name": "Natalie Portman",
+    "title": "Software Engineer",
+    "salary": "175000",
+    "department": "Information Technology"
+  },
+  {
+    "id": 7,
+    "avatar":"/assets/avatar-7.jpg",
+    "name": "Angelina Jolie",
+    "title": "Sales Representative",
+    "salary": "60000",
+    "department": "Sales"
+  },
+  {
+    "id": 8,
+    "avatar":"/assets/avatar-8.webp",
+    "name": "Hugh Jackman",
+    "title": "Software Engineer",
+    "salary": "175000",
+    "department": "Information Technology"
+  },
+  {
+    "id": 9,
+    "avatar":"/assets/avatar-9.jpg",
+    "name": "Sylvester Stallone",
+    "title": "Assistant to the Regional Manager",
+    "salary": "90000",
+    "department": "Executive"
+  },
+  {
+    "id": 10,
+    "avatar":"/assets/avatar-1.jpg",
+    "name": "Will Smith",
+    "title": "Sales Representative",
+    "salary": "60000",
+    "department": "Sales"
+  }
+]

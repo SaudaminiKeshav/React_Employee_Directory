@@ -8,16 +8,20 @@ const cardStyle = {
   margin: "1rem",
   position: "relative",
   width: "25%",
-  boxShadow:" 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-  display : 'inline-block'
+  boxShadow: " 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+  display: 'inline-block'
 };
 
-function EmployeeCards() {
+function EmployeeCards(props) {
   return (
     <>
-    <div className="card" style={cardStyle}>
-    <div class="card-header">Header</div>
-    </div>
+      <div className="container">
+        {props.employees.map(employee => (
+          <div className="card" key={employee.id} style={cardStyle}>
+            <div className="card-header"><img src={employee.avatar} style={{width:"35%"}}/></div>
+          </div>
+        ))}
+      </div>
     </>
   )
 }
