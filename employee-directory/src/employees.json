@@ -64,7 +64,7 @@
   },
   {
     "id": 9,
-    "avatar": "/assets/avatar-30.png",
+    "avatar": "/assets/avatar-10.png",
     "name": "Sylvester Stallone",
     "title": "Area Sales Manager",
     "salary": "90000",
@@ -72,7 +72,7 @@
   },
   {
     "id": 10,
-    "avatar": "/assets/avatar-1.jpg",
+    "avatar": "/assets/avatar-30.jpg",
     "name": "Will Smith",
     "title": "Sales Representative",
     "salary": "60000",
