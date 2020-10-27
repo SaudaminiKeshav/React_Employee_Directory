@@ -3,7 +3,7 @@
     "avatar": "/assets/avatar-9.jpg",
     "name": "Tom Cruise",
     "title": "Regional Manager",
-    "salary": "180000",
+    "salary": 180000,
     "department": "Executive"
   },
   {
@@ -11,7 +11,7 @@
     "avatar": "/assets/avatar-2.jpg",
     "name": "Brad Pitt",
     "title": "Accountant",
-    "salary": "70000",
+    "salary": 70000,
     "department": "Finance"
   },
   {
@@ -19,7 +19,7 @@
     "avatar": "/assets/avatar-3.jpg",
     "name": "Morgan Freeman",
     "title": "Quality Control Associate",
-    "salary": "40000",
+    "salary": 40000,
     "department": "Operations"
   },
   {
@@ -27,7 +27,7 @@
     "avatar": "/assets/avatar-4.jpg",
     "name": "Cameron Diaz",
     "title": "Manager",
-    "salary": "150000",
+    "salary": 150000,
     "department": "Operations"
   },
   {
@@ -35,7 +35,7 @@
     "avatar": "/assets/avatar-5.jpg",
     "name": "Scarlett Johansson",
     "title": "Associate Software Engineer",
-    "salary": "175000",
+    "salary": 175000,
     "department": "Information Technology"
   },
   {
@@ -43,7 +43,7 @@
     "avatar": "/assets/avatar-6.jpg",
     "name": "Natalie Portman",
     "title": "Software Engineer",
-    "salary": "175000",
+    "salary": 175000,
     "department": "Information Technology"
   },
   {
@@ -51,7 +51,7 @@
     "avatar": "/assets/avatar-7.jpg",
     "name": "Angelina Jolie",
     "title": "Sales Representative",
-    "salary": "60000",
+    "salary": 60000,
     "department": "Sales"
   },
   {
@@ -59,7 +59,7 @@
     "avatar": "/assets/avatar-8.webp",
     "name": "Hugh Jackman",
     "title": "Software Engineer",
-    "salary": "175000",
+    "salary": 175000,
     "department": "Information Technology"
   },
   {
@@ -67,7 +67,7 @@
     "avatar": "/assets/avatar-10.png",
     "name": "Sylvester Stallone",
     "title": "Area Sales Manager",
-    "salary": "90000",
+    "salary": 90000,
     "department": "Executive"
   },
   {
@@ -75,7 +75,7 @@
     "avatar": "/assets/avatar-30.jpg",
     "name": "Will Smith",
     "title": "Sales Representative",
-    "salary": "60000",
+    "salary": 60000,
     "department": "Sales"
   }
 ]
