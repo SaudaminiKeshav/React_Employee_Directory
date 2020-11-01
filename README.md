@@ -25,7 +25,7 @@ The user should be able to:
 ## Please click on the below link to checkout the finished React Employee Directory web application
 [React Employee Directory](https://github.com/SaudaminiKeshav/React_Employee_Directory/deployments/activity_log?environment=employee-directory-reactwebapp)
 
-![Gif](gif.gif)
+
 
 
 ## Commit Early and Often
