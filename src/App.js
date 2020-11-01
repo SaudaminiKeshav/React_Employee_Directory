@@ -10,6 +10,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import HeaderComponent from "./components/HeaderComponent"
 
 import Employees from "./employees.json";
+import ResetEmployees from "./employees.json";
 import EmployeeCards from "./components/EmployeeCards";
 
 function sortByProperty(property) {
@@ -25,6 +26,7 @@ function sortByProperty(property) {
 function App() {
   const [employees, setEmployees] = useState(Employees);
   const [filterDept, setFilterDept] = useState('');
+  const [viewType, setView] = useState('');
 
   function sortBySalary() {
     let sorted = [...employees].sort(sortByProperty("salary"))
@@ -38,65 +40,97 @@ function App() {
     console.log(sorted)
   };
 
-  function filterByDept(event) {
-    if (event.target.value != null && event.target.value != "") {
-      let filterEmployees = employees.filter(employee => {
+  const filterByDept = (event) => {
+    if (employees.length != 10) {
+      console.log(ResetEmployees)
+      let filterEmployees = ResetEmployees.filter(employee => {
         return employee.department === event.target.value;
       });
       setEmployees(filterEmployees);
-      console.log(employees)
+      setFilterDept(event.target.value);
+    } else {
+      let filterEmployees = [...employees].filter(employee => {
+        return employee.department === event.target.value;
+      });
+      setEmployees(filterEmployees);
+      setFilterDept(event.target.value);
     }
   }
 
   function resetArray() {
-    setEmployees(Employees);
+    if (employees.length != 10 || employees[0] != ResetEmployees[0]) {
+      setEmployees(ResetEmployees);
+    } else {
+      setEmployees(employees);
+    }
+    console.log(employees)
   };
 
+  function setListType(type) {
+    setView("List")
+  }
+  function setCardType(type) {
+    setView("Card")
+  }
+
   return (
-    <div className="App" style={{ background: "#fafafa", width: "100%"}}>
+    <div className="App" style={{ background: "#fafafa", width: "100%" }}>
       <>
         <HeaderComponent />
         <>
-        <div style={{ display: "inline-flex", margin: "20px" }}>
-          <button
-            className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-            style={{ background: "#e1f5fe", marginRight: "20px" }}
-            onClick={sortByName.bind(this)}>
-            Sort by employee name
-      </button>
-
-          <button
-            className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-            style={{ background: "#e1f5fe", marginRight: "20px" }}
-            onClick={sortBySalary.bind(this)}>
-            Sort by salary
-      </button>
-          <hr />
-
-          <FormControl style={{ width: 200, height: "100%" }}>
-            <InputLabel id="filter-dept-label">Filter by Department</InputLabel>
-            <Select
-              labelId="filter-dept-label"
-              id="filter-dept-select"
-              onChange={filterByDept.bind(this)}
-            >
-              <MenuItem value="Executive">Executive</MenuItem>
-              <MenuItem value="Finance">Finance</MenuItem>
-              <MenuItem value="Operations">Operations</MenuItem>
-              <MenuItem value="Information Technology">Information Technology</MenuItem>
-              <MenuItem value="Sales">Sales</MenuItem>
-            </Select>
-          </FormControl>
-          <ButtonGroup size="small" color="primary" aria-label="outlined primary button group">
-          <Button onClick={resetArray} >
-            Reset Employees
+          <div style={{ display: "inline-flex", margin: "20px" }}>
+            <ButtonGroup size="small" color="primary" aria-label="outlined primary button group">
+              <Button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                style={{ background: "#e1f5fe", marginRight: "20px" }} onClick={resetArray} >
+                Reset Employees
             </Button>
-        </ButtonGroup>
-          <br /><br />
+              <Button
+                className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                style={{ background: "#e1f5fe", marginRight: "20px" }}
+                onClick={sortByName.bind(this)}>
+                Sort by employee name
+      </Button>
 
-        </div>
-        <EmployeeCards employees={employees} />
-      </>
+              <Button
+                className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                style={{ background: "#e1f5fe", marginRight: "20px" }}
+                onClick={sortBySalary.bind(this)}>
+                Sort by salary
+      </Button>
+            </ButtonGroup>
+            <hr />
+
+            <FormControl style={{ width: 200, height: "100%" }}>
+              <InputLabel id="filter-dept-label">Filter by Department</InputLabel>
+              <Select
+                labelId="filter-dept-label"
+                id="filter-dept-select"
+                value={filterDept || ""}
+                onChange={filterByDept}
+              >
+                <MenuItem value="Executive">Executive</MenuItem>
+                <MenuItem value="Finance">Finance</MenuItem>
+                <MenuItem value="Operations">Operations</MenuItem>
+                <MenuItem value="Information Technology">Information Technology</MenuItem>
+                <MenuItem value="Sales">Sales</MenuItem>
+              </Select>
+            </FormControl>
+
+
+            <Button
+              onClick={setCardType.bind(this)} style={{ background: "#e1f5fe", width: "75px", height: "50px", marginRight: "20px" }}>
+              <img src="/assets/cardicon.png" style={{ background: "#e1f5fe", width: "55%", height: "45%" }} />
+            </Button>
+            <Button
+              onClick={setListType.bind(this)} style={{ background: "#e1f5fe", width: "75px", height: "50px" }}>
+              <img src="/assets/list_icon.png" style={{ background: "#e1f5fe", width: "65%", height: "45%" }} />
+            </Button>
+
+            <br /><br />
+
+          </div>
+          <EmployeeCards employees={employees} viewType={viewType}/>
+        </>
       </>
     </div>
   );
