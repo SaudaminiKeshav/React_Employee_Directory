@@ -27,7 +27,7 @@ function EmployeeCards(props) {
           <div className="card1" key={employee.id} style={cardStyle}>
             <div className="card-header1">
               <br/>
-              <img src={employee.avatar} style={{ width: "35%" }} /><br/>
+              <img src={employee.avatar} style={{ width: "35%" }} alt="employee image"/><br/>
               <h5><b>{employee.name}</b></h5><br/>
               <p style={textStyle}><b>Title:</b> {employee.title}</p>
               <p style={textStyle}><b>Salary:</b> {employee.salary}</p>
