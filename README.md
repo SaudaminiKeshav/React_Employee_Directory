@@ -23,7 +23,7 @@ The user should be able to:
   * Filter the users by at least one property.
   
 ## Please click on the below link to checkout the finished React Employee Directory web application
-[React Employee Directory](https://github.com/SaudaminiKeshav/React_Employee_Directory/deployments/activity_log?environment=employee-directory-reactwebapp)
+[React Employee Directory](https://employee-directory-reactwebapp.herokuapp.com/)
 
 ![Gif](public/gif2.gif)
 
